@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang='bn'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Abdullah All Maruf</title>
+    
+    <link rel="shortcut icon" href="http://icons.iconarchive.com/icons/succodesign/love-is-in-the-web/256/heart-icon.png" type="image/x-icon">
+    <link rel="icon" href="http://icons.iconarchive.com/icons/succodesign/love-is-in-the-web/256/heart-icon.png" type="image/x-icon">
+    <link rel="icon" href="http://icons.iconarchive.com/icons/succodesign/love-is-in-the-web/256/heart-icon.png" type="image/gif" sizes="16x16">
+    <meta property="og:title" content="
+<!DOCTYPE html>
+<html lang='bn'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maruf</title>
+    
+    <link rel="shortcut icon" href="http://icons.iconarchive.com/icons/succodesign/love-is-in-the-web/256/heart-icon.png" type="image/x-icon">
+    <link rel="icon" href="http://icons.iconarchive.com/icons/succodesign/love-is-in-the-web/256/heart-icon.png" type="image/x-icon">
+    <link rel="icon" href="http://icons.iconarchive.com/icons/succodesign/love-is-in-the-web/256/heart-icon.png" type="image/gif" sizes="16x16">
+    <meta property="og:title" content="Abdullah All Maruf" />
+    <meta property="og:description" content="Love yourself and always be happy and smile" />
+    <meta property="og:image" content=/static/life.png />
+    <link href="https://fonts.maateen.me/charukola-ultra-light/font.css" rel="stylesheet">
+    <link href="https://fonts.maateen.me/charu-chandan-hard-stroke/font.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <style>
+        #age,#age2{
+            color: rgb(240, 12, 12);
+            font-size: 40px;
+            font-style: bold
+        }
+    </style>
+    <script>
+
+        var start = new Date('02/08/2004 12:23 PM');
+        var timer;
+        var lang = 1;
+        var bochor = " বছর", din = " দিন", ghonta = "ঘণ্টা" , minit = "মিনিট", sekend =  "সেকেন্ড";
+        
+        function toggle(){
+            if(lang == 0){
+                bochor = "বছর";
+				din = "দিন";
+				ghonta = "ঘণ্টা";
+				minit = "মিনিট";
+				sekend =  "সেকেন্ড";
+            }else if(lang == 1){
+                bochor = "Year";
+				din = "Day";
+				ghonta = "Hour";
+				minit = "Minute";
+				sekend =  "Second";
+            }
+            lang = 1 - lang;
+        }
+		
+		var gebon = 1;		
+		function lifeIsBeautifull(){
+		if(gebon == 0) document.getElementById('age2').innerHTML = `<b>Happiness starts with a smile! <span style="color: red;">❤️</span></b>`;
+		else document.getElementById('age2').innerHTML = `<b>Happiness starts with a smile!  <span style="color: red;">❤️</span></b>`;
+		
+		gebon = 1 - gebon;
+			
+		}
+
+        function age() {
+            var now = new Date();
+            var age = now.getTime() - start.getTime();
+            var sec = (age / 1000).toFixed(0)
+
+            total_seconds_of_a_year = 31557600
+            total_seconds_of_a_day = 86400
+            total_seconds_of_a_hour = 3600
+            var year = ~~(sec / total_seconds_of_a_year)
+            var day = ~~((sec - year * total_seconds_of_a_year) / total_seconds_of_a_day)
+            var hour = ~~((sec - year * total_seconds_of_a_year - day * total_seconds_of_a_day) / total_seconds_of_a_hour)
+            var min = ~~((sec - year * total_seconds_of_a_year - day * total_seconds_of_a_day - hour * total_seconds_of_a_hour) / 60)
+            var sec = (sec % 60)
+            if (min < 10) { min = '0' + min }
+            if (hour < 10) { hour = '0' + hour }
+            if (day < 10) { day = '0' + day }
+            if (sec < 10) { sec = '0' + sec }
+            
+            var str = year + " "+bochor+"<br>" + day + " "+din+"<br>" + hour + " "+ghonta+"<br>" + min + " "+minit+"<br>" + sec + " "+sekend;
+            document.getElementById('age').innerHTML = str;
+        
+        }
+
+        timer = setInterval(age, 1);
+
+    </script>
+</head>
+
+<body>
+    <br>
+    <div class="container" style="text-align: center;">
+        <div id="age" style="font-family: CharuChandanHardStroke;" class="alert alert-success" onclick="toggle()"></div>
+        <div id="age2" style="font-family: CharukolaUltraLight;" class="alert alert-warning" onclick="PaincanchangePeople()"></><b>Happiness starts with a smile! <spna>❤️</spna></b></div>
+    </div>
+
+</body>
+
+</html>
